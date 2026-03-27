@@ -17,19 +17,14 @@ export default function Hero() {
 
       {/* Konten Utama */}
       {/* mt ditambahkan sedikit di mobile agar tidak tertutup lelehan coklat yang memanjang */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-6xl mt-48 md:mt-16"
-      >
+      <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut" }} className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-6xl mt-48 md:mt-16">
         {/* 2. Judul Besar: ROTI & Gambar 88 */}
         <div className="flex flex-row items-center justify-center gap-3 sm:gap-6 md:gap-16 lg:gap-32 mb-6 w-full px-4 md:px-0">
           <h1
             // Di desktop text-stroke 6px, di mobile 2px agar tidak ketebalan. Tracking juga disesuaikan.
             className="font-serif font-bold text-[#FFFF00] drop-shadow-md tracking-[-2px] sm:tracking-[-4px] md:tracking-[-10px] [-webkit-text-stroke:2.5px_#1A1A1A] md:[-webkit-text-stroke:6px_#1A1A1A]"
             style={{
-              fontSize: "clamp(48px, 14vw, 320px)", // Diperkecil batas bawah mobile agar seimbang dengan gambar 88
+              fontSize: "clamp(64px, 14vw, 320px)", // Diperkecil batas bawah mobile agar seimbang dengan gambar 88
               lineHeight: "1",
             }}
           >
@@ -38,14 +33,14 @@ export default function Hero() {
 
           {/* Placeholder Gambar 88 (Rotasi ke kanan) */}
           {/* Responsive aspect ratio supaya image membesar mengecil seirama screen size dari hp ke desktop */}
-          <div className="relative shrink-0 w-[24vw] sm:w-[150px] md:w-[250px] lg:w-[450px] min-w-[100px] aspect-[11/8]">
+          <div className="relative shrink-0 w-[24vw] sm:w-[200px] md:w-[250px] lg:w-[450px] min-w-[150px] aspect-[11/8]">
             <Image src="/images/88-image.png" alt="Logo 88" fill className="object-contain" priority />
           </div>
         </div>
 
         {/* 3. Tagline dengan Sisipan Gambar "everyday" */}
         {/* Ukuran teks mengecil di mobile agar bisa sejajar memeluk gambar "everyday" */}
-        <div className="flex flex-col items-center justify-center text-white text-[13px] sm:text-lg md:text-3xl font-normal tracking-tight mt-1 mb-8 md:mb-10 w-full px-2">
+        <div className="flex flex-col items-center justify-center text-white text-[15px] sm:text-lg md:text-3xl font-normal tracking-tight mt-1 mb-8 md:mb-10 w-full px-2">
           <div className="flex items-center flex-wrap justify-center gap-0 sm:gap-1 md:gap-6">
             <span>Fresh from oven</span>
 
