@@ -17,19 +17,13 @@ const FoodSiteSections: React.FC = () => {
     { name: "CAKE", image: "/images/cake.jpeg" },
     { name: "ROTI ISI", image: "/images/roti-i.jpeg" },
     { name: "ROTI TAWAR", image: "/images/roti-i.jpeg" },
-    { name: "ROTI SOSIS", image: "/images/roti-s.jpg" },
+    { name: "ROTI SOSIS", image: "/images/roti-s.JPG" },
   ];
 
   return (
     <div className="font-sans antialiased text-gray-900 bg-white mt-10">
       <section className="py-12 md:py-20 px-4 md:px-8 max-w-7xl mx-auto overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-50px" }}
-          className="text-center mb-10 md:mb-12"
-        >
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true, margin: "-50px" }} className="text-center mb-10 md:mb-12">
           <h2 className="text-2xl md:text-5xl font-bold mb-2 text-black">Produk kami</h2>
           <p className="text-gray-700 max-w-2xl mx-auto text-[13px] md:text-2xl">Pilihan produk terbaik dari kami</p>
         </motion.div>
@@ -53,13 +47,7 @@ const FoodSiteSections: React.FC = () => {
         </div>
 
         {/* Tombol Lihat Semua (Outlined) */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="flex justify-center"
-        >
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }} className="flex justify-center">
           <button className="px-5 py-2 md:px-6 md:py-2 border border-gray-400 rounded-md text-sm md:text-xl font-medium text-gray-700 hover:bg-gray-200 ">Lihat semua</button>
         </motion.div>
       </section>
