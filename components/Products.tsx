@@ -11,10 +11,11 @@ interface Product {
 const FoodSiteSections: React.FC = () => {
   // Data produk menggunakan interface yang sudah dibuat
   const products: Product[] = [
-    { name: "ROTI MANIS", image: "/images/roti-c.JPG" },
+    { name: "ROTI MANIS", image: "/images/roti-c.JPG", priceLabel: "/images/pin.png" },
     { name: "CAKE", image: "/images/cake.jpeg" },
     { name: "ROTI ISI", image: "/images/roti-i.jpeg" },
-    { name: "ROTI SOSIS", image: "/images/roti-s.jpg", priceLabel: "/images/pin.png" },
+    { name: "ROTI TAWAR", image: "/images/roti-i.jpeg" },
+    { name: "ROTI SOSIS", image: "/images/roti-s.jpg" },
   ];
 
   return (
@@ -26,15 +27,22 @@ const FoodSiteSections: React.FC = () => {
         </div>
 
         {/* Grid Produk - Reusable Card */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-12">
           {products.map((product, index) => (
-            <ProductCard key={index} productName={product.name} imageSrc={product.image} priceLabelImage={product.priceLabel} />
+            <div
+              key={index}
+              // Mobile: 2 baris (50% dikurangi porsi gap-4 atau 16px)
+              // Desktop: 4 baris (25% dikurangi porsi gap-6 atau 24px)
+              className="w-[calc(50%-8px)] md:w-[calc(25%-18px)]"
+            >
+              <ProductCard productName={product.name} imageSrc={product.image} priceLabelImage={product.priceLabel} />
+            </div>
           ))}
         </div>
 
         {/* Tombol Lihat Semua (Outlined) */}
         <div className="flex justify-center">
-          <button className="px-6 py-2 border border-gray-400 rounded-md text-xl font-medium text-gray-700 hover:border-gray-500 transition-colors">Lihat semua</button>
+          <button className="px-6 py-2 border border-gray-400 rounded-md text-xl font-medium text-gray-700 hover:bg-gray-200 ">Lihat semua</button>
         </div>
       </section>
     </div>

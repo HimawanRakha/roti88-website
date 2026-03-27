@@ -19,7 +19,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ imageSrc, productName, priceL
       </div>
 
       {priceLabelImage && (
-        <div className="absolute top-[-100px] right-[-40px] z-10">
+        <div className="absolute top-[-100px] left-[-40px] z-10">
           <img src={priceLabelImage} alt="Price Label" />
         </div>
       )}

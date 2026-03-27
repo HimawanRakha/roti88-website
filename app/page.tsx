@@ -4,7 +4,7 @@ import About from "@/components/About";
 import Products from "@/components/Products";
 import Promo from "@/components/Promo";
 import CTA from "@/components/CTA";
-import Outlet from "@/components/Outlet";
+import FindUs from "@/components/Outlet";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <Products />
       <Promo />
       <CTA />
-      <Outlet />
+      <FindUs />
       <Footer />
     </main>
   );
