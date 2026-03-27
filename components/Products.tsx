@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import React from "react";
 import ProductCard from "./ProductCard";
 
@@ -20,30 +22,46 @@ const FoodSiteSections: React.FC = () => {
 
   return (
     <div className="font-sans antialiased text-gray-900 bg-white mt-10">
-      <section className="py-12 md:py-20 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold mb-2 text-black">Produk kami</h2>
-          <p className="text-gray-700 max-w-2xl mx-auto text-2xl">Pilihan produk terbaik dari kami</p>
-        </div>
+      <section className="py-12 md:py-20 px-4 md:px-8 max-w-7xl mx-auto overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="text-center mb-10 md:mb-12"
+        >
+          <h2 className="text-2xl md:text-5xl font-bold mb-2 text-black">Produk kami</h2>
+          <p className="text-gray-700 max-w-2xl mx-auto text-[13px] md:text-2xl">Pilihan produk terbaik dari kami</p>
+        </motion.div>
 
         {/* Grid Produk - Reusable Card */}
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-12">
           {products.map((product, index) => (
-            <div
+            <motion.div
               key={index}
-              // Mobile: 2 baris (50% dikurangi porsi gap-4 atau 16px)
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-50px" }}
+              // Mobile & Tablet: 2 baris (50% dikurangi porsi gap-4 atau 16px)
               // Desktop: 4 baris (25% dikurangi porsi gap-6 atau 24px)
-              className="w-[calc(50%-8px)] md:w-[calc(25%-18px)]"
+              className="w-[calc(50%-8px)] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
             >
               <ProductCard productName={product.name} imageSrc={product.image} priceLabelImage={product.priceLabel} />
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Tombol Lihat Semua (Outlined) */}
-        <div className="flex justify-center">
-          <button className="px-6 py-2 border border-gray-400 rounded-md text-xl font-medium text-gray-700 hover:bg-gray-200 ">Lihat semua</button>
-        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="flex justify-center"
+        >
+          <button className="px-5 py-2 md:px-6 md:py-2 border border-gray-400 rounded-md text-sm md:text-xl font-medium text-gray-700 hover:bg-gray-200 ">Lihat semua</button>
+        </motion.div>
       </section>
     </div>
   );

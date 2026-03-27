@@ -33,8 +33,8 @@ export default function LocationCard({ name, address, googleMapsUrl }: LocationC
 
       {/* Teks Lokasi */}
       <div className="flex flex-col pr-6 text-left">
-        <h4 className="text-[15px] font-bold text-black leading-tight mb-1">{name}</h4>
-        <p className="text-[12px] text-gray-600 line-clamp-2">{address}</p>
+        <h4 className="text-[18px] font-bold text-black leading-tight mb-1">{name}</h4>
+        <p className="text-[15px] text-gray-600 line-clamp-2">{address}</p>
       </div>
     </a>
   );

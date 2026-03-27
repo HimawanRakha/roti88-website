@@ -45,7 +45,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#5D2B21] backdrop-blur-sm">
-        <div className="mx-auto px-6 h-[89px] flex items-center justify-between relative">
+        <div className="mx-auto px-4 md:px-6 h-[60px] md:h-[89px] flex items-center justify-between relative">
           {/* LEFT: Hamburger */}
           <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
             {open ? <X size={26} /> : <Menu size={26} />}
@@ -55,9 +55,9 @@ export default function Navbar() {
           <div className="w-[26px] md:hidden"></div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-[75px]">
+          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-6 lg:gap-[75px]">
             {navLinks.map((link) => (
-              <a key={link.label} href={link.href} className={`font-lora text-[20px] transition-all duration-200 ${active === link.href ? "text-white underline font-semibold" : "text-white/70 hover:text-white"}`}>
+              <a key={link.label} href={link.href} className={`font-lora text-[15px] lg:text-[20px] transition-all duration-200 ${active === link.href ? "text-white underline font-semibold" : "text-white/70 hover:text-white"}`}>
                 {link.label}
               </a>
             ))}
@@ -74,7 +74,7 @@ export default function Navbar() {
         transform transition-transform duration-300 ease-in-out
         ${open ? "translate-x-0" : "-translate-x-full"}`}
       >
-        <div className="flex items-center justify-between px-6 h-[89px] border-b border-white/10">
+        <div className="flex items-center justify-between px-4 md:px-6 h-[60px] md:h-[89px] border-b border-white/10">
           <span className="text-white font-semibold text-lg">Menu</span>
           <button onClick={() => setOpen(false)}>
             <X size={26} className="text-white" />

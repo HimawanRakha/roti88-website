@@ -1,14 +1,22 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
     // Background coklat gelap, sesuaikan hex color-nya jika ada warna spesifik dari desainer Anda
-    <footer className="bg-[#5A2C22] text-white pt-16 pb-8 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 md:gap-8">
+    <motion.footer
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true, margin: "-10px" }}
+      className="bg-[#5A2C22] text-white pt-16 pb-8 px-8 sm:px-12 md:px-16 lg:px-24"
+    >
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row justify-between gap-12 md:gap-8">
         {/* Kolom Kiri: Brand & Deskripsi */}
-        <div className="md:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-lora tracking-tight">ROTI 88</h2>
-          <p className="text-[15px] md:text-base leading-relaxed mb-6 max-w-sm text-gray-200 font-serif">Fresh from oven everyday! Banyak pilihan, selalu siap jadi pilihanmu hari ini.</p>
+        <div className="md:col-span-2 lg:col-span-1 lg:w-1/2">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 font-lora tracking-tight">ROTI 88</h2>
+          <p className="text-[13px] md:text-base leading-relaxed mb-6 max-w-sm text-gray-200 font-serif">Fresh from oven everyday! Banyak pilihan, selalu siap jadi pilihanmu hari ini.</p>
 
           {/* Sosial Media Icons */}
           <div className="flex items-center gap-4">
@@ -32,11 +40,11 @@ export default function Footer() {
         </div>
 
         {/* Kolom Kanan: Quick Links & Produk */}
-        <div className="flex flex-col sm:flex-row gap-12 sm:gap-24 md:mr-16 lg:mr-22">
+        <div className="flex flex-col sm:flex-row gap-12 sm:gap-24 md:col-span-2 lg:col-span-1 lg:w-1/2 lg:justify-end lg:pr-16">
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-4 font-serif">Quick Links</h3>
-            <ul className="space-y-1 font-serif text-[18px] text-gray-200">
+            <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 font-serif">Quick Links</h3>
+            <ul className="space-y-1 font-serif text-[15px] md:text-[18px] text-gray-200">
               {/* TODO: Masukkan link untuk masing-masing halaman */}
               <li>
                 <a href="#" className="hover:text-white hover:underline transition-colors">
@@ -63,8 +71,8 @@ export default function Footer() {
 
           {/* Produk */}
           <div>
-            <h3 className="text-xl font-bold mb-4 font-serif">Produk</h3>
-            <ul className="space-y-1 font-serif text-[18px] text-gray-200">
+            <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 font-serif">Produk</h3>
+            <ul className="space-y-1 font-serif text-[15px] md:text-[18px] text-gray-200">
               {/* TODO: Masukkan link untuk kategori produk */}
               <li>
                 <a href="#" className="hover:text-white hover:underline transition-colors">
@@ -92,7 +100,7 @@ export default function Footer() {
       </div>
 
       {/* Bagian Bawah: Copyright */}
-      <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/30 text-xs md:text-[15px] text-gray-300 font-serif">@2026 ROTI88. All right reserved</div>
-    </footer>
+      <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/30 text-[10px] md:text-[15px] text-gray-300 font-serif">@2026 ROTI88. All right reserved</div>
+    </motion.footer>
   );
 }
