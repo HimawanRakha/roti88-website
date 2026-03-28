@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 export default function Promo() {
   return (
     <>
-      <section className="py-12 md:py-20 px-6 sm:px-8 md:px-12 max-w-7xl mx-auto overflow-hidden">
-        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
+      <section id="promo" className="py-12 md:py-20 px-6 sm:px-8 md:px-12 max-w-7xl mx-auto overflow-hidden">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2  items-start">
           {/* Kolom Kiri: Promo Hari Ini */}
           <motion.div initial={{ opacity: 0, x: -60 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, ease: "easeOut" }} viewport={{ once: true, margin: "-100px" }} className="flex flex-col items-center lg:items-center">
             <h2 className="text-2xl md:text-5xl font-bold mb-6 md:mb-8 text-black text-center">Promo hari ini</h2>

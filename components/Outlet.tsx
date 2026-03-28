@@ -23,7 +23,7 @@ const MapComponent = dynamic(() => import("./Map"), {
 // 2. KOMPONEN UTAMA SECTION
 export default function FindUsSection() {
   return (
-    <section className="py-12 md:py-20 px-4 md:px-8 max-w-[1400px] mx-auto flex flex-col overflow-hidden">
+    <section id="outlet" className="py-12 md:py-20 px-4 md:px-8 max-w-[1400px] mx-auto flex flex-col overflow-hidden">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}

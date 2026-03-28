@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-[#F87900] overflow-hidden flex flex-col items-center justify-center font-sans">
+    <section id="home" className="relative min-h-screen bg-[#F87900] overflow-hidden flex flex-col items-center justify-center font-sans">
       {/* 1. Dekorasi Lelehan Coklat (Top Chocolate Drip) */}
       <div className="absolute inset-0 w-full h-[50vh] md:h-full pointer-events-none z-0">
         {/* Di mobile pakai object-cover agar memanjang ke bawah sesuai desain, di desktop kembali ke object-contain milikmu */}

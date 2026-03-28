@@ -4,13 +4,11 @@ import React from "react";
 interface LocationCardProps {
   name: string;
   address: string;
-  googleMapsUrl: string; // ✨ Tambahkan ke dalam props
+  googleMapsUrl: string; 
 }
 
 export default function LocationCard({ name, address, googleMapsUrl }: LocationCardProps) {
   return (
-    // ✨ Ubah pembungkus paling luar menjadi tag <a> ✨
-    // Tambahkan properti block dan text-inherit agar styling link tidak merusak layout
     <a
       href={googleMapsUrl}
       target="_blank"
@@ -34,7 +32,7 @@ export default function LocationCard({ name, address, googleMapsUrl }: LocationC
       {/* Teks Lokasi */}
       <div className="flex flex-col pr-6 text-left">
         <h4 className="text-[18px] font-bold text-black leading-tight mb-1">{name}</h4>
-        <p className="text-[15px] text-gray-600 line-clamp-2">{address}</p>
+        <p className="text-[12px] md:text-[15px] text-gray-600 line-clamp-2">{address}</p>
       </div>
     </a>
   );

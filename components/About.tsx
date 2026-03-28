@@ -45,7 +45,7 @@ function Counter({ end, suffix = "", duration = 2000, start = 0 }: { end: number
 
 export default function AboutAndServices() {
   return (
-    <div className="w-full font-sans overflow-hidden">
+    <div id="tentang" className="w-full font-sans overflow-hidden">
       <section className="py-16 px-4 md:px-8  mx-auto text-center mb-20">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

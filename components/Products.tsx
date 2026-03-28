@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import ProductCard from "./ProductCard";
+import Link from "next/link";
 
 // Mendefinisikan tipe data untuk object di dalam array products
 interface Product {
@@ -16,7 +17,7 @@ const FoodSiteSections: React.FC = () => {
     { name: "ROTI MANIS", image: "/images/roti-c.JPG", priceLabel: "/images/pin.png" },
     { name: "CAKE", image: "/images/cake.jpeg" },
     { name: "ROTI ISI", image: "/images/roti-i.jpeg" },
-    { name: "ROTI TAWAR", image: "/images/roti-i.jpeg" },
+    { name: "ROTI JUMBO", image: "/images/roti-j.JPG" },
     { name: "ROTI SOSIS", image: "/images/roti-s.JPG" },
   ];
 
@@ -48,7 +49,9 @@ const FoodSiteSections: React.FC = () => {
 
         {/* Tombol Lihat Semua (Outlined) */}
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }} className="flex justify-center">
-          <button className="px-5 py-2 md:px-6 md:py-2 border border-gray-400 rounded-md text-sm md:text-xl font-medium text-gray-700 hover:bg-gray-200 ">Lihat semua</button>
+          <Link href="/produk">
+            <button className="px-5 py-2 md:px-6 md:py-2 border border-gray-400 rounded-md text-sm md:text-xl font-medium text-gray-700 hover:bg-gray-200 ">Lihat semua</button>
+          </Link>
         </motion.div>
       </section>
     </div>

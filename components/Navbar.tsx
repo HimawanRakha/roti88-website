@@ -1,33 +1,46 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Tentang Kami", href: "#tentang" },
-  { label: "Produk", href: "#produk" },
-  { label: "Outlet", href: "#outlet" },
-  { label: "Promo", href: "#promo" },
+  { label: "Home", href: "/#home" },
+  { label: "Tentang Kami", href: "/#tentang" },
+  { label: "Produk", href: "/produk" },
+  { label: "Promo", href: "/#promo" },
+  { label: "Outlet", href: "/#outlet" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState("#home");
+  const [activeHash, setActiveHash] = useState("#home");
+  const pathname = usePathname();
 
   // 🔥 Scroll Spy
   useEffect(() => {
-    const sections = navLinks.map((link) => document.querySelector(link.href));
+    if (pathname !== "/") return;
+
+    const sections = navLinks
+      .map((link) => {
+        if (link.href.includes("#")) {
+          const id = link.href.substring(link.href.indexOf("#"));
+          return document.querySelector(id);
+        }
+        return null;
+      })
+      .filter(Boolean);
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActive(`#${entry.target.id}`);
+            setActiveHash(`#${entry.target.id}`);
           }
         });
       },
       {
-        threshold: 0.6,
+        threshold: 0.2,
       },
     );
 
@@ -40,7 +53,22 @@ export default function Navbar() {
         if (section) observer.unobserve(section);
       });
     };
-  }, []);
+  }, [pathname]);
+
+  const isActive = (href: string) => {
+    if (pathname === "/produk" && href === "/produk") return true;
+    if (pathname === "/" && href.includes("#")) {
+      return activeHash === href.substring(href.indexOf("#"));
+    }
+    return false;
+  };
+
+  const getHref = (href: string) => {
+    if (pathname === "/" && href.includes("#")) {
+      return href.substring(href.indexOf("#"));
+    }
+    return href;
+  };
 
   return (
     <>
@@ -57,9 +85,13 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-6 lg:gap-[75px]">
             {navLinks.map((link) => (
-              <a key={link.label} href={link.href} className={`font-lora text-[15px] lg:text-[20px] transition-all duration-200 ${active === link.href ? "text-white underline font-semibold" : "text-white/70 hover:text-white"}`}>
+              <Link 
+                key={link.label} 
+                href={getHref(link.href)} 
+                className={`font-lora text-[15px] lg:text-[18px] transition-all duration-200 ${isActive(link.href) ? "text-white underline font-bold" : "text-white/70 hover:text-white"}`}
+              >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -83,16 +115,16 @@ export default function Navbar() {
 
         <div className="flex flex-col px-6 py-6 gap-2">
           {navLinks.map((link, index) => (
-            <a
+            <Link
               key={link.label}
-              href={link.href}
+              href={getHref(link.href)}
               onClick={() => setOpen(false)}
-              className={`group flex items-center justify-between text-lg py-3 px-3 rounded-xl transition-all duration-200 ${active === link.href ? "text-white bg-white/10" : "text-white/80 hover:bg-white/10"}`}
+              className={`group flex items-center justify-between text-lg py-3 px-3 rounded-xl transition-all duration-200 ${isActive(link.href) ? "text-white bg-white/10 font-bold underline" : "text-white/80 hover:bg-white/10"}`}
               style={{ transitionDelay: `${index * 50}ms` }}
             >
               <span className="group-hover:translate-x-1 transition-transform">{link.label}</span>
               <span className="opacity-0 group-hover:opacity-100 transition">→</span>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
