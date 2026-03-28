@@ -14,11 +14,11 @@ interface Product {
 const FoodSiteSections: React.FC = () => {
   // Data produk menggunakan interface yang sudah dibuat
   const products: Product[] = [
-    { name: "ROTI MANIS", image: "/images/roti-c.JPG", priceLabel: "/images/pin.png" },
+    { name: "ROTI MANIS", image: "/images/roti-bb.JPG", priceLabel: "/images/pin.png" },
     { name: "CAKE", image: "/images/cake.jpeg" },
-    { name: "ROTI ISI", image: "/images/roti-i.jpeg" },
-    { name: "ROTI JUMBO", image: "/images/roti-j.JPG" },
-    { name: "ROTI SOSIS", image: "/images/roti-s.JPG" },
+    // { name: "ROTI ISI", image: "/images/roti-i.jpeg" },
+    // { name: "ROTI JUMBO", image: "/images/roti-j.JPG" },
+    // { name: "ROTI SOSIS", image: "/images/roti-s.JPG" },
   ];
 
   return (
@@ -38,9 +38,9 @@ const FoodSiteSections: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
               viewport={{ once: true, margin: "-50px" }}
-              // Mobile & Tablet: 2 baris (50% dikurangi porsi gap-4 atau 16px)
-              // Desktop: 4 baris (25% dikurangi porsi gap-6 atau 24px)
-              className="w-[calc(50%-8px)] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
+              // Mobile: 1 kolom (w-full)
+              // Tablet & Desktop: 2 kolom (50% dikurangi porsi gap-6 atau 24px)
+              className="w-full md:w-[calc(50%-12px)]"
             >
               <ProductCard productName={product.name} imageSrc={product.image} priceLabelImage={product.priceLabel} />
             </motion.div>

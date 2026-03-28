@@ -13,10 +13,10 @@ export default function LocationCard({ name, address, googleMapsUrl }: LocationC
       href={googleMapsUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative flex items-center gap-4 p-4 bg-white border border-gray-200 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)] transition-all cursor-pointer h-full no-underline text-inherit block"
+      className="group relative flex items-center gap-4 p-4 bg-white border border-gray-200 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)] transition-all cursor-pointer h-full no-underline block hover:text-white hover:bg-[#FF7A00]"
     >
       {/* Ikon Panah (Kanan Atas) */}
-      <div className="absolute top-3 right-3 text-black">
+      <div className="absolute top-3 right-3 text-black group-hover:text-white transition-colors">
         <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
         </svg>
@@ -31,8 +31,8 @@ export default function LocationCard({ name, address, googleMapsUrl }: LocationC
 
       {/* Teks Lokasi */}
       <div className="flex flex-col pr-6 text-left">
-        <h4 className="text-[18px] font-bold text-black leading-tight mb-1">{name}</h4>
-        <p className="text-[12px] md:text-[15px] text-gray-600 line-clamp-2">{address}</p>
+        <h4 className="text-[18px] font-bold text-black group-hover:text-white transition-colors mb-1">{name}</h4>
+        <p className="text-[12px] md:text-[15px] text-gray-600 group-hover:text-gray-100 transition-colors line-clamp-2">{address}</p>
       </div>
     </a>
   );

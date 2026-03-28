@@ -277,7 +277,7 @@ export const products: Product[] = [
   {
     sku: "R88-027-SB",
     name: "Sosis Bunga",
-    category: "Roti Sosis",
+    category: "Roti Manis",
     price: 5000,
     size: "Reguler",
     shortDescription: "Roti sosis berbentuk bunga.",
@@ -367,7 +367,7 @@ export const products: Product[] = [
   {
     sku: "R88-036-AAP",
     name: "Abon Ayam Pedas",
-    category: "Roti Isi",
+    category: "Roti Manis",
     price: 8000,
     size: "Reguler",
     shortDescription: "Roti isi abon ayam pedas.",
@@ -377,7 +377,7 @@ export const products: Product[] = [
   {
     sku: "R88-037-AAO",
     name: "Abon Ayam Ori",
-    category: "Roti Isi",
+    category: "Roti Manis",
     price: 8000,
     size: "Reguler",
     shortDescription: "Roti isi abon ayam original.",
@@ -387,7 +387,7 @@ export const products: Product[] = [
   {
     sku: "R88-038-AS",
     name: "Abon Sapi",
-    category: "Roti Isi",
+    category: "Roti Manis",
     price: 8500,
     size: "Reguler",
     shortDescription: "Roti isi abon sapi.",
@@ -432,7 +432,7 @@ export const products: Product[] = [
     size: "Ø16 cm",
     shortDescription: "Sifon cake mini rasa mocca.",
     longDescription: "Sifon cake lembut rasa mocca diameter ±16 cm.",
-    imageUrl: `${BUCKET_URL}/R88-042-SMM.JPG`,
+    imageUrl: `${BUCKET_URL}/R88-042-SMM.jpeg`,
   },
   {
     sku: "R88-043-SMP",
@@ -442,12 +442,12 @@ export const products: Product[] = [
     size: "Ø16 cm",
     shortDescription: "Sifon cake mini pandan.",
     longDescription: "Sifon cake lembut dengan aroma pandan diameter ±16 cm.",
-    imageUrl: `${BUCKET_URL}/R88-043-SMP.JPG`,
+    imageUrl: `${BUCKET_URL}/R88-042-SMM.jpeg`,
   },
   {
     sku: "R88-044-RT",
     name: "Roti Tawar",
-    category: "Roti Tawar",
+    category: "Roti Manis",
     price: 10000,
     size: "Loaf",
     shortDescription: "Roti tawar lembut serbaguna.",

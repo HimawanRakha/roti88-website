@@ -10,13 +10,13 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ imageSrc, productName, priceLabelImage }) => {
   return (
-    <div className="relative aspect-square rounded-lg shadow-md group cursor-pointer">
-      <Image src={imageSrc} alt={productName} fill className="object-cover rounded-lg z-0" sizes="(max-width: 768px) 50vw, 25vw" />
+    <div className="relative w-full rounded-lg shadow-md group cursor-pointer aspect-video">
+      <Image src={imageSrc} alt={productName} fill className="object-cover rounded-lg z-0" sizes="(max-width: 768px) 100vw, 50vw" />
 
       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/60 transition-all duration-300 rounded-lg z-10"></div>
 
       <div className="absolute inset-0 flex items-center justify-center p-4 z-20">
-        <h3 className="text-xl md:text-2xl font-bold text-white text-center tracking-tight [text-shadow:1px_1px_2px_var(--tw-shadow-color)] shadow-black/70">{productName}</h3>
+        <h3 className="font-lora text-xl md:text-2xl font-bold text-white text-center drop-shadow-md">{productName}</h3>
       </div>
 
       {priceLabelImage && (

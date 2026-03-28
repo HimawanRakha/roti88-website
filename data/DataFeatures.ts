@@ -7,7 +7,7 @@ export type Feature = {
 export const features: Feature[] = [
   {
     title: "Gratis Antar",
-    desc: "ROTI88 menyediakan layanan gratis antar ke seluruh area Lumajang.",
+    desc: "ROTI 88 menyediakan layanan gratis antar ke seluruh area Lumajang.",
     icon: "truck",
   },
   {
@@ -17,12 +17,12 @@ export const features: Feature[] = [
   },
   {
     title: "Varian",
-    desc: "ROTI88 menghadirkan lebih dari 50++ varian roti, tersedia mulai dari Rp3.500",
+    desc: "ROTI 88 menghadirkan lebih dari 50++ varian roti, tersedia mulai dari Rp3.500",
     icon: "box",
   },
   {
     title: "Halal",
-    desc: "Roti 88 menggunakan bahan yang terjamin dan telah bersertifikasi halal",
+    desc: "ROTI 88 menggunakan bahan yang terjamin dan telah bersertifikasi halal",
     icon: "check",
   },
 ];

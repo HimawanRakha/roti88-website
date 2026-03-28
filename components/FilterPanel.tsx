@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Search } from "lucide-react";
 
-const categories = ["Roti Manis", "Cake", "Roti Isi", "Roti Jumbo", "Roti Sosis"];
+const categories = ["Roti Manis", "Cake"];
 
 export default function FilterPanel() {
   const [searchTerm, setSearchTerm] = useState("");

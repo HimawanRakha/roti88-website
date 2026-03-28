@@ -29,7 +29,7 @@ export default function FindUsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, margin: "-50px" }}
-        className="text-2xl md:text-5xl font-extrabold text-black mb-6 md:mb-8 text-left tracking-tight"
+        className="text-2xl md:text-5xl font-extrabold text-black mb-6 md:mb-8 text-left"
       >
         Temukan Kami
       </motion.h2>

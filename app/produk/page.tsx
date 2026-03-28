@@ -7,7 +7,7 @@ import ProductCard1 from "@/components/ProductCard1";
 import ProductModal from "@/components/ProductModal";
 import { ListFilter, Search, X, ArrowLeft, ArrowRight } from "lucide-react";
 
-const CATEGORIES = ["Roti Manis", "Cake", "Roti Isi", "Roti Jumbo", "Roti Sosis", "Roti Tawar"];
+const CATEGORIES = ["Roti Manis", "Cake"];
 const ITEMS_PER_PAGE = 10;
 
 export default function ProductsPage() {
@@ -83,7 +83,7 @@ export default function ProductsPage() {
     <main className="min-h-screen bg-white pb-20">
       {/* Header Banner */}
       <div className="relative h-48 md:h-60 w-full overflow-hidden">
-        <Image src={products[0]?.imageUrl} alt="Latar belakang produk" fill className="object-cover brightness-50" priority />
+        <Image src={"/images/roti-bb.JPG"} alt="Latar belakang produk" fill className="object-cover brightness-50" priority />
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-3xl md:text-5xl font-extrabold text-white">Produk Kami</h1>
         </div>
@@ -104,7 +104,7 @@ export default function ProductsPage() {
           {/* Sidebar Desktop */}
           <aside className="hidden md:block w-1/4 flex-shrink-0">
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 sticky top-24">
-              <FilterContent />
+              {FilterContent()}
             </div>
           </aside>
 
@@ -148,7 +148,7 @@ export default function ProductsPage() {
                 <X className="w-5 h-5" />
               </button>
             </div>
-            <FilterContent />
+            {FilterContent()}
             <button onClick={() => setIsMobileFilterOpen(false)} className="w-full mt-8 bg-orange-600 text-white py-3 rounded-lg font-semibold text-xs">
               Terapkan Filter
             </button>

@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="flex flex-row items-center justify-center gap-3 sm:gap-6 md:gap-16 lg:gap-32 mb-6 w-full px-4 md:px-0">
           <h1
             // Di desktop text-stroke 6px, di mobile 2px agar tidak ketebalan. Tracking juga disesuaikan.
-            className="font-serif font-bold text-[#FFFF00] drop-shadow-md tracking-[-2px] sm:tracking-[-4px] md:tracking-[-10px] [-webkit-text-stroke:2.5px_#1A1A1A] md:[-webkit-text-stroke:6px_#1A1A1A]"
+            className="font-serif font-bold text-[#FFFF00] drop-shadow-md tracking-tight [-webkit-text-stroke:2.5px_#1A1A1A] md:[-webkit-text-stroke:4px_#1A1A1A]"
             style={{
               fontSize: "clamp(64px, 14vw, 320px)", // Diperkecil batas bawah mobile agar seimbang dengan gambar 88
               lineHeight: "1",
@@ -40,14 +40,14 @@ export default function Hero() {
 
         {/* 3. Tagline dengan Sisipan Gambar "everyday" */}
         {/* Ukuran teks mengecil di mobile agar bisa sejajar memeluk gambar "everyday" */}
-        <div className="flex flex-col items-center justify-center text-white text-[18px] sm:text-lg md:text-3xl font-normal tracking-tight mt-1 mb-8 md:mb-10 w-full px-2">
-          <div className="flex items-center flex-wrap justify-center gap-0 sm:gap-1 md:gap-6">
+        <div className=" font-lora flex flex-col items-center justify-center text-white text-[18px] sm:text-lg md:text-3xl font-normal mt-1 mb-8 md:mb-10 w-full px-2">
+          <div className=" flex items-center flex-wrap justify-center gap-0 sm:gap-1 md:gap-6">
             <span>Fresh from oven</span>
 
             {/* Placeholder Gambar Everyday */}
             {/* Membesarkan ukuran rasio dasar dan menggunakan margin negatif agar memeluk erat teks di HP dan Tablet */}
-            <div className="relative w-[90px] h-[30px] sm:w-[130px] sm:h-[45px] md:w-[10vw] md:h-[60px] lg:w-[10vw] lg:h-[80px] -rotate-12 flex-shrink-0 -mx-2 sm:-mx-3 md:-mx-4 lg:-mx-4">
-              <Image src="/images/everyday-image.png" alt="Everyday" fill className="object-contain" />
+            <div className="relative w-[90px] h-[40px] sm:w-[130px] sm:h-[45px] md:w-[15vw] md:h-[90px] lg:w-[15vw] lg:h-[100px] -rotate-12 flex-shrink-0 -mx-1 sm:-mx-5 md:-mx-4 lg:-mx-6">
+              <Image src="/images/everyday-image1.png" alt="Everyday" fill className="object-contain" />
             </div>
 
             <span className="z-10 relative">Banyak pilihan,</span>
@@ -81,7 +81,7 @@ export default function Hero() {
         </div>
 
         {/* 5. Jam Operasional */}
-        <div className="mt-8 md:mt-8 text-white text-[15px] md:text-base font-bold text-center">
+        <div className="mt-8 md:mt-8 text-white text-[15px] md:text-base font-bold text-center font-lora">
           <p>Jam Operasional (Setiap hari)</p>
           <p className="mt-0.5 md:mt-1">06.00 - 20.30</p>
         </div>
