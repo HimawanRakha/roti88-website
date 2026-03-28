@@ -1,23 +1,40 @@
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Products from "@/components/Products";
 import Promo from "@/components/Promo";
 import CTA from "@/components/CTA";
 import FindUs from "@/components/Outlet";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main>
-      <Navbar />
-      <Hero />
-      <About />
-      <Products />
-      <CTA />
-      <Promo />
-      <FindUs />
-      <Footer />
-    </main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Bakery",
+            name: "Roti88",
+            image: "../images/logo.png",
+            url: "https://roti88-website.vercel.app/",
+            telephone: "+6282228333485",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Lumajang",
+              addressRegion: "Jawa Timur",
+              addressCountry: "ID",
+            },
+          }),
+        }}
+      />
+      <main>
+        <Hero />
+        <About />
+        <Products />
+        <CTA />
+        <Promo />
+        <FindUs />
+      </main>
+    </>
   );
 }

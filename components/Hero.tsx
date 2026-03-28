@@ -61,7 +61,7 @@ export default function Hero() {
           {/* Tombol Lihat Produk */}
           <a
             href="#produk"
-            className="flex items-center justify-center gap-1.5 md:gap-4 bg-[#5B2E1E] text-white font-serif text-[13px] md:text-xl px-4 py-3 md:px-8 md:py-4 rounded-lg md:rounded-xl hover:bg-[#432014] transition-all duration-300 shadow-xl w-full md:w-auto"
+            className="flex items-center justify-center gap-1.5 md:gap-4 bg-[#5B2E1E] text-white font-serif text-[13px] md:text-xl px-4 py-3 md:px-8 md:py-4 rounded-xl md:rounded-xl hover:bg-[#432014] transition-all duration-300 shadow-xl w-full md:w-auto"
           >
             <span className="whitespace-nowrap">Lihat Produk</span>
             <span className="bg-white rounded-full p-1 md:p-1.5 flex items-center justify-center">

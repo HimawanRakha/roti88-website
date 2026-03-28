@@ -1,6 +1,7 @@
 "use client";
 import { ChevronUp, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Promo() {
   return (
@@ -17,7 +18,7 @@ export default function Promo() {
 
               {/* Container Utama untuk Gambar Selebaran Promo */}
               <div className="relative rounded-xl border-2 border-gray-800 p-2 bg-white shadow-sm w-full text-center justify-center flex items-center">
-                <img src="/images/promo.png" alt="Selebaran Promo" className="w-full rounded-lg object-cover" />
+                <Image src="/images/promo.png" alt="Selebaran Promo" width={600} height={800} className="w-full h-auto rounded-lg object-cover" />
               </div>
             </div>
           </motion.div>
@@ -58,8 +59,8 @@ export default function Promo() {
 
               {/* Kolom Gambar/Ilustrasi Katalog */}
               {/* Menggunakan w-2/5 agar proporsional bersama teks sebelah kirinya dalam setting flex-row */}
-              <div className="w-[35%] sm:w-[40%] md:w-[45%] lg:w-[40%] flex-shrink-0">
-                <img src="/images/bg-kata.png" alt="Ilustrasi Katalog" className="w-full h-full object-cover object-center rounded-l-2xl sm:rounded-l-3xl" />
+              <div className="w-[35%] sm:w-[40%] md:w-[45%] lg:w-[40%] flex-shrink-0 relative">
+                <Image src="/images/bg-kata.png" alt="Ilustrasi Katalog" fill className="object-cover object-center rounded-l-2xl sm:rounded-l-3xl" />
               </div>
             </div>
           </motion.div>
