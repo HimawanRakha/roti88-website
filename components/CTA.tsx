@@ -21,10 +21,15 @@ export default function CTA() {
         </p>
 
         {/* Tombol WhatsApp (Oranye Solid) */}
-        <button className="flex justify-center items-center gap-2 md:gap-5 w-full md:w-auto px-4 py-3 md:px-6 md:py-4 bg-[#FF7A00] rounded-lg text-white text-[14px] md:text-xl font-semibold hover:bg-[#E06A00] transition-colors shadow-md mx-auto">
+        <a
+          href="https://wa.me/6282142634989"
+          target="_blank"
+          rel="noreferrer"
+          className="flex justify-center items-center gap-2 md:gap-5 w-full md:w-auto px-4 py-3 md:px-6 md:py-4 bg-[#FF7A00] rounded-lg text-white text-[14px] md:text-xl font-semibold hover:bg-[#E06A00] transition-colors shadow-md mx-auto"
+        >
           <img src="/images/logos_whatsapp-icon.png" alt="WhatsApp" className="w-5 h-5 md:w-8 md:h-8" />
           Konsultasi via WhatsApp
-        </button>
+        </a>
       </motion.div>
     </section>
   );

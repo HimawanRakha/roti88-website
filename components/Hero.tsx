@@ -60,7 +60,7 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row gap-3 md:gap-5 justify-center items-center w-full md:w-auto px-4 md:px-0">
           {/* Tombol Lihat Produk */}
           <a
-            href="#produk"
+            href="/produk"
             className="flex items-center justify-center gap-1.5 md:gap-4 bg-[#5B2E1E] text-white font-serif text-[13px] md:text-xl px-4 py-3 md:px-8 md:py-4 rounded-xl md:rounded-xl hover:bg-[#432014] transition-all duration-300 shadow-xl w-full md:w-auto"
           >
             <span className="whitespace-nowrap">Lihat Produk</span>
@@ -72,7 +72,7 @@ export default function Hero() {
 
           {/* Tombol Beli Sekarang */}
           <a
-            href="tel:082228333485"
+            href="https://wa.me/6282142634989"
             className="flex items-center justify-center gap-1.5 md:gap-4 bg-white text-black font-serif font-bold text-[13px] md:text-xl px-4 py-3 md:px-8 md:py-4 rounded-lg md:rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-xl w-full md:w-auto"
           >
             <Phone className="text-black w-3 h-3 md:w-[24px] md:h-[24px]" />

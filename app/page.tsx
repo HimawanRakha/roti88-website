@@ -17,7 +17,7 @@ export default function Home() {
             name: "Roti88",
             image: "../images/logo.png",
             url: "https://roti88-website.vercel.app/",
-            telephone: "+6282228333485",
+            telephone: "6282142634989",
             address: {
               "@type": "PostalAddress",
               addressLocality: "Lumajang",
