@@ -17,7 +17,7 @@ export const features: Feature[] = [
   },
   {
     title: "Varian",
-    desc: "ROTI 88 menghadirkan lebih dari 50++ varian roti, tersedia mulai dari Rp3.500",
+    desc: "ROTI 88 menghadirkan lebih dari 50++ varian roti, tersedia mulai dari Rp 3.500",
     icon: "box",
   },
   {

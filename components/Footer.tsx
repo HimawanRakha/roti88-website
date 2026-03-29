@@ -73,16 +73,7 @@ export default function Footer() {
                   Roti Manis
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:text-white hover:underline transition-colors">
-                  Roti isi
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white hover:underline transition-colors">
-                  Roti Tawar
-                </a>
-              </li>
+
               <li>
                 <a href="#" className="hover:text-white hover:underline transition-colors">
                   Cake
@@ -94,7 +85,7 @@ export default function Footer() {
       </div>
 
       {/* Bagian Bawah: Copyright */}
-      <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/30 text-[10px] md:text-[15px] text-gray-300 font-serif">@2026 ROTI88. All right reserved</div>
+      <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/30 text-[10px] md:text-[15px] text-gray-300 font-serif">@2026 ROTI 88. All right reserved</div>
     </motion.footer>
   );
 }

@@ -14,7 +14,7 @@ interface Product {
 const FoodSiteSections: React.FC = () => {
   // Data produk menggunakan interface yang sudah dibuat
   const products: Product[] = [
-    { name: "ROTI MANIS", image: "/images/roti-bb.JPG", priceLabel: "/images/pin.png" },
+    { name: "ROTI MANIS", image: "/images/roti-bb.JPG", priceLabel: "/images/pin1.png" },
     { name: "CAKE", image: "/images/cake.jpeg" },
     // { name: "ROTI ISI", image: "/images/roti-i.jpeg" },
     // { name: "ROTI JUMBO", image: "/images/roti-j.JPG" },

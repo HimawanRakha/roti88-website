@@ -17,7 +17,7 @@ export default function CTA() {
       >
         <h2 className="text-2xl md:text-5xl font-bold text-white mb-4 md:mb-6 [text-shadow:1px_1px_2px_var(--tw-shadow-color)] shadow-black/80">Tertarik untuk memesan?</h2>
         <p className="text-gray-100 text-sm md:text-2xl mb-8 max-w-6xl mx-auto shadow-black/80">
-          Roti 88 hadir untuk berbagai kebutuhan, mulai dari sarapan sehari-hari, camilan keluarga, hingga pesanan untuk acara seperti hajatan, kenduri, acara kantor, kegiatan komunitas. berbagai momen kebersamaan lainnya
+          ROTI 88 hadir untuk berbagai kebutuhan, mulai dari sarapan sehari-hari, camilan keluarga, hingga pesanan untuk acara seperti hajatan, kenduri, acara kantor, kegiatan komunitas. berbagai momen kebersamaan lainnya
         </p>
 
         {/* Tombol WhatsApp (Oranye Solid) */}

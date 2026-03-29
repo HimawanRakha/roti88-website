@@ -19,7 +19,7 @@ export default function Home() {
             url: "https://roti88-website.vercel.app/",
             telephone: "6282142634989",
             address: {
-              "@type": "PostalAddress",
+              "@type": "67316",
               addressLocality: "Lumajang",
               addressRegion: "Jawa Timur",
               addressCountry: "ID",
