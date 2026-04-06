@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   // Gunakan template agar halaman lain (seperti /produk) otomatis pakai format ini
   title: {
     default: "ROTI 88 |  Selalu Jadi Pilihan! ",
-    template: "%s | Roti88",
+    template: "%s | ROTI 88",
   },
   description: "ROTI 88 menyediakan berbagai macam roti manis, roti tawar, cake, dan roti sosis lezat yang dipanggang segar setiap hari dengan bahan premium.",
   keywords: ["toko roti", "roti manis", "roti tawar", "bakery surabaya", "roti sosis", "roti88"],
