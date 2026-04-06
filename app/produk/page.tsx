@@ -1,6 +1,6 @@
 // app/produk/page.tsx
 "use client";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { products, Product } from "@/data/Product";
@@ -11,7 +11,7 @@ import { ListFilter, Search, X, ArrowLeft, ArrowRight } from "lucide-react";
 const CATEGORIES = ["Roti Manis", "Cake"];
 const ITEMS_PER_PAGE = 10;
 
-export default function ProductsPage() {
+function ProductsContent() {
   const searchParams = useSearchParams();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
@@ -171,5 +171,13 @@ export default function ProductsPage() {
       {/* Modal Produk (Dari komponen sebelumnya) */}
       <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
     </main>
+  );
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+      <ProductsContent />
+    </Suspense>
   );
 }
