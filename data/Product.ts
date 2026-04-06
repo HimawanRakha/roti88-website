@@ -1,5 +1,3 @@
-// data/products.ts
-
 export interface Product {
   sku: string;
   name: string;
@@ -72,7 +70,7 @@ export const products: Product[] = [
     size: "Reguler",
     shortDescription: "Roti isi selai strawberry.",
     longDescription: "Roti empuk dengan selai strawberry manis dan sedikit asam yang segar.",
-    imageUrl: `${BUCKET_URL}/R88-006-STR.JPG`,
+    imageUrl: `${BUCKET_URL}/R88-007-TL.JPG`,
   },
   {
     sku: "R88-007-TL",
@@ -82,7 +80,7 @@ export const products: Product[] = [
     size: "Reguler",
     shortDescription: "Roti isi krim talas.",
     longDescription: "Roti lembut dengan isian krim talas bercita rasa khas.",
-    imageUrl: `${BUCKET_URL}/R88-007-TL.JPG`,
+    imageUrl: `${BUCKET_URL}/R88-006-STR.JPG`,
   },
   {
     sku: "R88-008-SKM",
@@ -332,7 +330,7 @@ export const products: Product[] = [
     size: "Reguler",
     shortDescription: "Roti gulung coklat.",
     longDescription: "Roti lembut berbentuk gulung dengan isian selai manis di dalamnya.",
-    imageUrl: `${BUCKET_URL}/R88-032-RC.JPG`,
+    imageUrl: `${BUCKET_URL}/R88-032-RC.jpg`,
   },
   {
     sku: "R88-033-BBC",
@@ -342,7 +340,7 @@ export const products: Product[] = [
     size: "Reguler",
     shortDescription: "Roti blueberry cup.",
     longDescription: "Roti lembut dengan topping blueberry dalam cup.",
-    imageUrl: `${BUCKET_URL}/R88-033-BBC.JPG`,
+    imageUrl: `${BUCKET_URL}/R88-033-BBC.jpg`,
   },
   {
     sku: "R88-034-PJ",
@@ -352,7 +350,7 @@ export const products: Product[] = [
     size: "Jumbo",
     shortDescription: "Roti pentung jumbo.",
     longDescription: "Roti pentung ukuran lebih besar dengan tekstur lembut.",
-    imageUrl: `${BUCKET_URL}/R88-034-PJ.JPG`,
+    imageUrl: `${BUCKET_URL}/R88-034-PJ.jpg`,
   },
   {
     sku: "R88-035-DR2",
@@ -372,7 +370,7 @@ export const products: Product[] = [
     size: "Reguler",
     shortDescription: "Roti isi abon ayam pedas.",
     longDescription: "Roti lembut dengan abon ayam pedas gurih yang menggugah selera.",
-    imageUrl: `${BUCKET_URL}/R88-036-AAP.JPG`,
+    imageUrl: `${BUCKET_URL}/R88-036-AAP.jpeg`,
   },
   {
     sku: "R88-037-AAO",
@@ -382,17 +380,17 @@ export const products: Product[] = [
     size: "Reguler",
     shortDescription: "Roti isi abon ayam original.",
     longDescription: "Roti empuk dengan abon ayam gurih rasa klasik.",
-    imageUrl: `${BUCKET_URL}/R88-037-AAO.JPG`,
+    imageUrl: `${BUCKET_URL}/R88-037-AAO.jpeg`,
   },
   {
     sku: "R88-038-AS",
-    name: "Abon Sapi",
+    name: "Abon Sapi Ori",
     category: "Roti Manis",
     price: 8500,
     size: "Reguler",
     shortDescription: "Roti isi abon sapi.",
     longDescription: "Roti lembut dengan abon sapi gurih kaya rasa.",
-    imageUrl: `${BUCKET_URL}/R88-038-AS.JPG`,
+    imageUrl: `${BUCKET_URL}/R88-038-AS.jpeg`,
   },
   {
     sku: "R88-039-KPJ",
@@ -451,8 +449,8 @@ export const products: Product[] = [
     price: 10000,
     size: "Loaf",
     shortDescription: "Roti tawar lembut serbaguna.",
-    longDescription: "Roti tawar empuk cocok untuk toast dan sandwich.",
-    imageUrl: `${BUCKET_URL}/R88-044-RT.JPG`,
+    longDescription: "Roti tawar empuk cocok untuk toast dan sandwich. (10 lembar)",
+    imageUrl: `${BUCKET_URL}/R88-044-RT.jpg`,
   },
   {
     sku: "R88-045-CM",
@@ -462,7 +460,7 @@ export const products: Product[] = [
     size: "Reguler",
     shortDescription: "Roti dengan krim dan meses coklat.",
     longDescription: "Roti lembut dengan krim manis dan taburan meses coklat berisi 4 di dalamnya.",
-    imageUrl: `${BUCKET_URL}/R88-045-CM.JPG`,
+    imageUrl: `${BUCKET_URL}/`,
   },
   {
     sku: "R88-046-KPI",
@@ -532,7 +530,7 @@ export const products: Product[] = [
     size: "-",
     shortDescription: "Sponge cake lembut.",
     longDescription: "Cake lembut dengan tekstur ringan dan rasa manis yang pas.",
-    imageUrl: `${BUCKET_URL}/R88-052-SC.JPG`,
+    imageUrl: `${BUCKET_URL}/R88-052-SC.jpg`,
   },
   {
     sku: "R88-053-RCK",
@@ -542,7 +540,7 @@ export const products: Product[] = [
     size: "-",
     shortDescription: "Cake gulung lembut.",
     longDescription: "Kue gulung lembut dengan lapisan selai manis di dalamnya.",
-    imageUrl: `${BUCKET_URL}/R88-053-RCK.JPG`,
+    imageUrl: `${BUCKET_URL}/R88-053-RCK.jpg`,
   },
   {
     sku: "R88-054-PC",
@@ -552,7 +550,7 @@ export const products: Product[] = [
     size: "-",
     shortDescription: "Cake lembut berbentuk pillow.",
     longDescription: "Cake empuk dengan tekstur lembut untuk camilan keluarga.",
-    imageUrl: `${BUCKET_URL}/R88-054-PC.JPG`,
+    imageUrl: `${BUCKET_URL}/R88-054-PC.jpg`,
   },
   {
     sku: "R88-055-KL",

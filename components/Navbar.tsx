@@ -17,7 +17,6 @@ export default function Navbar() {
   const [activeHash, setActiveHash] = useState("#home");
   const pathname = usePathname();
 
-  // 🔥 Scroll Spy
   useEffect(() => {
     if (pathname !== "/") return;
 
@@ -85,10 +84,10 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-6 lg:gap-[75px]">
             {navLinks.map((link) => (
-              <Link 
-                key={link.label} 
-                href={getHref(link.href)} 
-                className={`font-lora text-[15px] lg:text-[18px] transition-all duration-200 ${isActive(link.href) ? "text-white underline font-bold" : "text-white/70 hover:text-white"}`}
+              <Link
+                key={link.label}
+                href={getHref(link.href)}
+                className={`font-lora text-[15px] lg:text-[18px] transition-all duration-200 focus:no-underline focus-visible:no-underline ${isActive(link.href) ? "text-white font-bold" : "text-white/70 hover:text-white"}`}
               >
                 {link.label}
               </Link>
@@ -107,9 +106,9 @@ export default function Navbar() {
         ${open ? "translate-x-0" : "-translate-x-full"}`}
       >
         <div className="flex items-center justify-between px-4 md:px-6 h-[60px] md:h-[89px] border-b border-white/10">
-          <span className="text-white font-semibold text-lg">Menu</span>
+          <span className="text-white font-semibold text-lg font-lora">Menu</span>
           <button onClick={() => setOpen(false)}>
-            <X size={26} className="text-white" />
+            <X size={26} className="text-white font-lora" />
           </button>
         </div>
 
@@ -119,7 +118,7 @@ export default function Navbar() {
               key={link.label}
               href={getHref(link.href)}
               onClick={() => setOpen(false)}
-              className={`group flex items-center justify-between text-lg py-3 px-3 rounded-xl transition-all duration-200 ${isActive(link.href) ? "text-white bg-white/10 font-bold underline" : "text-white/80 hover:bg-white/10"}`}
+              className={`group flex items-center justify-between text-lg py-3 px-3 rounded-xl font-lora transition-all duration-200 focus:no-underline focus-visible:no-underline ${isActive(link.href) ? "text-white bg-white/10 font-bold" : "text-white/80 hover:bg-white/10"}`}
               style={{ transitionDelay: `${index * 50}ms` }}
             >
               <span className="group-hover:translate-x-1 transition-transform">{link.label}</span>

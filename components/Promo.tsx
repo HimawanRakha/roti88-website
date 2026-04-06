@@ -11,14 +11,14 @@ export default function Promo() {
           {/* Kolom Kiri: Promo Hari Ini */}
           <motion.div initial={{ opacity: 0, x: -60 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, ease: "easeOut" }} viewport={{ once: true, margin: "-100px" }} className="flex flex-col items-center lg:items-center">
             <h2 className="text-2xl md:text-5xl font-bold mb-6 md:mb-8 text-black text-center">Promo hari ini</h2>
-            <div className="relative inline-block w-full max-w-sm mx-auto md:mx-0">
+            <div className="relative inline-block w-full max-w-sm mx-auto md:mx-0 ">
               {/* Bingkai dekoratif berlapis di belakang */}
-              <div className="absolute inset-0 rounded-xl border border-black rotate-1 transform translate-x-2 translate-y-2"></div>
-              <div className="absolute inset-0 rounded-xl border border-black -rotate-1 transform -translate-x-2 translate-y-1"></div>
+              <div className="absolute inset-0 rounded-xl border  rotate-1 transform translate-x-2 translate-y-2 bg-[#F87900] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]"></div>
+              <div className="absolute inset-0 rounded-xl border  -rotate-1 transform -translate-x-2 translate-y-1 bg-[#F87900] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]"></div>
 
               {/* Container Utama untuk Gambar Selebaran Promo */}
-              <div className="relative rounded-xl border-2 border-gray-800 p-2 bg-white shadow-sm w-full text-center justify-center flex items-center">
-                <Image src="/images/promo.png" alt="Selebaran Promo" width={600} height={800} className="w-full h-auto rounded-lg object-cover" />
+              <div className="relative rounded-xl border-2  p-2 bg-white w-full  justify-center flex items-center shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
+                <Image src="/images/prom2e2eo.png" alt="Belum Tersedia" width={600} height={800} className="w-full h-auto rounded-lg object-cover" />
               </div>
             </div>
           </motion.div>
@@ -48,12 +48,17 @@ export default function Promo() {
 
                 {/* Tombol PDF Katalog */}
                 <div>
-                  <button className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-5 sm:py-3 bg-[#FF7A00] rounded-lg text-white text-[12px] sm:text-base md:text-lg font-semibold hover:bg-[#E06A00] transition-colors shadow-md w-full sm:w-auto">
+                  <a
+                    href="https://drive.google.com/file/d/1bKyWgLHCHTC3GxDLn2_sYmA5bzvayKB8/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-5 sm:py-3 bg-[#FF7A00] rounded-lg text-white text-[12px] sm:text-base md:text-lg font-semibold hover:bg-[#E06A00] transition-colors shadow-md w-full sm:w-auto"
+                  >
                     <svg className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                     </svg>
                     <span className="truncate">Lihat Katalog (PDF)</span>
-                  </button>
+                  </a>
                 </div>
               </div>
 

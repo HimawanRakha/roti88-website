@@ -81,11 +81,11 @@ export default function ProductsPage() {
 
   return (
     <main className="min-h-screen bg-white pb-20">
-      {/* Header Banner */}
       <div className="relative h-48 md:h-60 w-full overflow-hidden">
         <Image src={"/images/roti-bb.JPG"} alt="Latar belakang produk" fill className="object-cover brightness-50" priority />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-3xl md:text-5xl font-extrabold text-white">Produk Kami</h1>
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <h1 className="text-2xl md:text-5xl font-extrabold mb-2 text-white">Produk Kami</h1>
+          <p className="text-gray-100 max-w-2xl mx-auto text-[13px] md:text-2xl">Pilihan produk terbaik dari kami</p>
         </div>
       </div>
 
@@ -103,9 +103,7 @@ export default function ProductsPage() {
         <div className="flex flex-col md:flex-row gap-8">
           {/* Sidebar Desktop */}
           <aside className="hidden md:block w-1/4 flex-shrink-0">
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 sticky top-24">
-              {FilterContent()}
-            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 sticky top-24">{FilterContent()}</div>
           </aside>
 
           {/* Grid Produk */}

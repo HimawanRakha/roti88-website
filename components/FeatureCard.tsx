@@ -57,7 +57,7 @@ const icons: Record<IconType, React.ReactNode> = {
 export const FeatureCard: React.FC<FeatureCardProps> = ({ title, desc, icon }) => {
   return (
     <div className="bg-white font-lora rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] p-8 text-center flex flex-col items-center border border-gray-100 transition-transform hover:-translate-y-1">
-      <div className="w-10 h-10 sm:w-16 sm:h-16 mb-3 sm:mb-5 flex items-center justify-center text-[#FF7A00]">{icons[icon]}</div>
+      <div className={`${icon === "check" ? "w-12 h-12 sm:w-16 sm:h-16" : "w-10 h-10 sm:w-16 sm:h-16"} mb-3 sm:mb-5 flex items-center justify-center text-[#FF7A00]`}>{icons[icon]}</div>
       <h3 className="font-bold text-[16px] sm:text-2xl text-black mb-2 sm:mb-3">{title}</h3>
       <p className="text-[13px] sm:text-lg text-gray-500">{desc}</p>
     </div>

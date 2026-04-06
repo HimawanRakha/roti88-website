@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="flex flex-row items-center justify-center gap-3 sm:gap-6 md:gap-16 lg:gap-32 mb-6 w-full px-4 md:px-0">
           <h1
             // Di desktop text-stroke 6px, di mobile 2px agar tidak ketebalan. Tracking juga disesuaikan.
-            className="font-serif font-bold text-[#FFFF00] drop-shadow-md tracking-tight [-webkit-text-stroke:2.5px_#1A1A1A] md:[-webkit-text-stroke:4px_#1A1A1A]"
+            className="font-serif font-bold text-[#FFFF00] drop-shadow-md tracking-normal [-webkit-text-stroke:2.5px_#1A1A1A] md:[-webkit-text-stroke:4px_#1A1A1A]"
             style={{
               fontSize: "clamp(64px, 14vw, 320px)", // Diperkecil batas bawah mobile agar seimbang dengan gambar 88
               lineHeight: "1",
@@ -47,21 +47,21 @@ export default function Hero() {
             {/* Placeholder Gambar Everyday */}
             {/* Membesarkan ukuran rasio dasar dan menggunakan margin negatif agar memeluk erat teks di HP dan Tablet */}
             <div className="relative w-[90px] h-[40px] sm:w-[130px] sm:h-[45px] md:w-[15vw] md:h-[90px] lg:w-[15vw] lg:h-[100px] -rotate-12 flex-shrink-0 -mx-1 sm:-mx-5 md:-mx-4 lg:-mx-6">
-              <Image src="/images/everyday-image1.png" alt="Everyday" fill className="object-contain" />
+              <Image src="/images/everyday-image2.png" alt="Everyday" fill className="object-contain" />
             </div>
 
             <span className="z-10 relative">Banyak pilihan,</span>
           </div>
-          <span className="mt-1 md:mt-2">selalu siap jadi pilihanmu hari ini</span>
+          <span className="mt-1 md:mt-2">Selalu siap jadi pilihanmu hari ini</span>
         </div>
 
         {/* 4. Tombol Aksi (Call to Action) */}
         {/* Disusun bertumpuk vertikal (flex-col) 100% full width di mobile, kembali berdampingan di desktop */}
-        <div className="flex flex-col md:flex-row gap-3 md:gap-5 justify-center items-center w-full md:w-auto px-4 md:px-0">
+        <div className="flex flex-col md:flex-row gap-3 md:gap-5 justify-center items-center w-full md:w-auto px-4 md:px-0 ">
           {/* Tombol Lihat Produk */}
           <a
             href="/produk"
-            className="flex items-center justify-center gap-1.5 md:gap-4 bg-[#5B2E1E] text-white font-serif text-[13px] md:text-xl px-4 py-3 md:px-8 md:py-4 rounded-xl md:rounded-xl hover:bg-[#432014] transition-all duration-300 shadow-xl w-full md:w-auto"
+            className="flex items-center justify-center gap-1.5 md:gap-4 bg-[#5B2E1E] text-white font-serif text-[13px] md:text-xl px-4 py-3 md:px-8 md:py-4 rounded-xl md:rounded-xl hover:bg-[#432014] transition-all duration-300 shadow-xl w-full md:w-auto hover:-translate-y-1"
           >
             <span className="whitespace-nowrap">Lihat Produk</span>
             <span className="bg-white rounded-full p-1 md:p-1.5 flex items-center justify-center">
@@ -73,7 +73,7 @@ export default function Hero() {
           {/* Tombol Beli Sekarang */}
           <a
             href="https://wa.me/6282142634989"
-            className="flex items-center justify-center gap-1.5 md:gap-4 bg-white text-black font-serif font-bold text-[13px] md:text-xl px-4 py-3 md:px-8 md:py-4 rounded-lg md:rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-xl w-full md:w-auto"
+            className="flex items-center justify-center gap-1.5 md:gap-4 bg-white text-black font-serif font-bold text-[13px] md:text-xl px-4 py-3 md:px-8 md:py-4 rounded-lg md:rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-xl w-full md:w-auto hover:-translate-y-1"
           >
             <Phone className="text-black w-3 h-3 md:w-[24px] md:h-[24px]" />
             <span className="whitespace-nowrap">Beli Sekarang</span>

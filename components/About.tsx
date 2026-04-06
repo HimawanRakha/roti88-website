@@ -47,13 +47,7 @@ export default function AboutAndServices() {
   return (
     <div id="tentang" className="w-full font-sans overflow-hidden">
       <section className="py-16 px-4 md:px-8  mx-auto text-center mb-20">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-50px" }}
-          className="text-2xl md:text-5xl font-bold mb-4 md:mb-6 text-black"
-        >
+        <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true, margin: "-50px" }} className="text-2xl md:text-5xl font-bold mb-4 md:mb-6 text-black">
           Tentang kami
         </motion.h2>
         <motion.p
@@ -110,13 +104,13 @@ export default function AboutAndServices() {
       <section className="w-full">
         {/* Banner Orange */}
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="bg-[#FF7A00] py-10 px-4 text-center">
-          <h2 className="text-2xl md:text-5xl font-bold text-white mb-4 md:mb-6">Layanan kami</h2>
+          <h2 className="text-2xl md:text-5xl font-bold text-white mb-2">Layanan kami</h2>
           <p className="text-white text-sm md:text-2xl opacity-90">Kami akan selalu memberikan kualitas dan pelayanan terbaik</p>
         </motion.div>
 
         {/* Container Cards - Dirubah jadi grid 1 kolumn murni di hp, 2 di tablet */}
         {/* TODO: Ganti URL di bawah dengan path gambar pattern background roti milikmu */}
-        <div className="relative py-16 px-4 md:px-8 bg-[url('/images/ng-roti.png')] bg-repeat bg-center">
+        <div className="relative py-16 px-4 md:px-8 bg-[url('/images/ng-roti1.png')] bg-contain bg-center bg-no-repeat">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 relative z-10 mb-10 mt-10">
             {features.map((item, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }}>

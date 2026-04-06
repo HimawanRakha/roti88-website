@@ -24,16 +24,10 @@ const MapComponent = dynamic(() => import("./Map"), {
 export default function FindUsSection() {
   return (
     <section id="outlet" className="py-12 md:py-20 px-4 md:px-8 max-w-[1400px] mx-auto flex flex-col overflow-hidden">
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true, margin: "-50px" }}
-        className="text-2xl md:text-5xl font-extrabold text-black mb-6 md:mb-8 text-left"
-      >
+      <motion.h2 initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true, margin: "-50px" }} className="text-2xl md:text-5xl font-bold text-black mb-6 md:mb-8 text-left">
         Temukan Kami
       </motion.h2>
-      
+
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
         {/* Kolom Kiri: Peta Leaflet */}
         {/* Disembunyikan pada mobile (<768px) karena sering merusak layout tap */}
@@ -50,20 +44,14 @@ export default function FindUsSection() {
         {/* Kolom Kanan: Daftar Lokasi Outlet */}
         <div className="w-full lg:w-[55%] flex flex-col">
           {/* Grid 2 Kolom untuk Card Lokasi */}
-        <div className="max-h-[350px] lg:max-h-none overflow-y-auto lg:overflow-visible pr-2 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {locations.map((loc, index) => (
-              <motion.div
-                key={loc.id}
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-                viewport={{ once: true, margin: "-50px" }}
-              >
-                <LocationCard name={loc.name} address={loc.address} googleMapsUrl={loc.googleMapsUrl} />
-              </motion.div>
-            ))}
-          </div>
+          <div className="max-h-[350px] lg:max-h-none overflow-y-auto lg:overflow-visible pr-2 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {locations.map((loc, index) => (
+                <motion.div key={loc.id} initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }}>
+                  <LocationCard name={loc.name} address={loc.address} googleMapsUrl={loc.googleMapsUrl} />
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
