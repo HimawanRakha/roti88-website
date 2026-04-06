@@ -1,6 +1,7 @@
 // app/produk/page.tsx
 "use client";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { products, Product } from "@/data/Product";
 import ProductCard1 from "@/components/ProductCard1";
@@ -11,6 +12,7 @@ const CATEGORIES = ["Roti Manis", "Cake"];
 const ITEMS_PER_PAGE = 10;
 
 export default function ProductsPage() {
+  const searchParams = useSearchParams();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   // State untuk Filter & Pagination
@@ -18,6 +20,18 @@ export default function ProductsPage() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+
+  useEffect(() => {
+    const categoryParam = searchParams?.get("category");
+    if (categoryParam) {
+      const categories = categoryParam
+        .split(",")
+        .map((value) => value.trim())
+        .filter((value) => CATEGORIES.includes(value));
+      setSelectedCategories(categories);
+      setCurrentPage(1);
+    }
+  }, [searchParams]);
 
   // Logic Kategori
   const handleCategoryChange = (category: string) => {

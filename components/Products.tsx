@@ -32,18 +32,11 @@ const FoodSiteSections: React.FC = () => {
         {/* Grid Produk - Reusable Card */}
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-12">
           {products.map((product, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-              viewport={{ once: true, margin: "-50px" }}
-              // Mobile: 1 kolom (w-full)
-              // Tablet & Desktop: 2 kolom (50% dikurangi porsi gap-6 atau 24px)
-              className="w-full md:w-[calc(50%-12px)]"
-            >
-              <ProductCard productName={product.name} imageSrc={product.image} priceLabelImage={product.priceLabel} />
-            </motion.div>
+            <Link key={index} href={`/produk?category=${encodeURIComponent(product.name)}`} className="block w-full md:w-[calc(50%-12px)]">
+              <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }} className="w-full">
+                <ProductCard productName={product.name} imageSrc={product.image} priceLabelImage={product.priceLabel} />
+              </motion.div>
+            </Link>
           ))}
         </div>
 
