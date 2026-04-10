@@ -23,7 +23,7 @@ export default function Hero() {
           <h1
             data-text="ROTI"
             className="relative inline-block font-serif text-[#FFFF00] drop-shadow-md tracking-normal z-10 
-             antialiased transform-gpu will-change-transform /* <-- Ini obat anti-glitch nya */
+             antialiased transform-gpu will-change-transform
              before:content-[attr(data-text)] before:absolute before:left-0 before:top-0 before:-z-10 
              before:text-[#FFFF00]
              before:[-webkit-text-stroke:4px_#1A1A1A] md:before:[-webkit-text-stroke:10px_#1A1A1A]"
