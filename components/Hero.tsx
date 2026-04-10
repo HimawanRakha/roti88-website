@@ -21,9 +21,7 @@ export default function Hero() {
         {/* 2. Judul Besar: ROTI & Gambar 88 */}
         <div className="flex flex-row items-center justify-center gap-3 sm:gap-6 md:gap-16 lg:gap-24 mb-6 w-full px-4 md:px-0">
           <h1
-            data-text="ROTI" // Tambahkan atribut ini untuk digunakan di pseudo-element
-            // Gunakan relative, z-10, dan -z-10 untuk mengatur penumpukan
-            // Gunakan [-webkit-text-stroke] hanya pada elemen semu 'before'
+            data-text="ROTI"
             className="relative font-serif  text-[#FFFF00] tracking-normal z-10 
              before:content-[attr(data-text)] before:absolute before:left-0 before:top-0 before:-z-10 
              before:text-[#FFFF00]
