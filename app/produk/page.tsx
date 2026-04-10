@@ -96,7 +96,7 @@ function ProductsContent() {
   return (
     <main className="min-h-screen bg-white pb-20">
       <div className="relative h-48 md:h-60 w-full overflow-hidden">
-        <Image src={"/images/roti-bb.JPG"} alt="Latar belakang produk" fill className="object-cover brightness-50" priority />
+        <Image src={"/images/roti-bb.png"} alt="Latar belakang produk" fill className="object-cover brightness-50" priority />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <h1 className="text-2xl md:text-5xl font-extrabold mb-2 text-white">Produk Kami</h1>
           <p className="text-gray-100 max-w-2xl mx-auto text-[13px] md:text-2xl">Pilihan produk terbaik dari kami</p>
