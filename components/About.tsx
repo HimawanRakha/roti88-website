@@ -74,7 +74,7 @@ export default function AboutAndServices() {
         >
           <div className="flex flex-col items-center py-4 md:py-0 px-1 sm:px-4 text-center">
             <span className="text-gray-500 mb-1 md:mb-2 md:text-lg font-medium text-[9px] sm:text-[13px] uppercase">Berdiri sejak</span>
-            <span className="text-2xl sm:text-4xl lg:text-5xl font-semibold text-black font-sans drop-shadow-sm">
+            <span className="text-2xl sm:text-4xl lg:text-5xl font-semibold text-black font-lora drop-shadow-sm">
               <Counter end={2012} duration={2500} start={1950} />
             </span>
           </div>
@@ -110,7 +110,7 @@ export default function AboutAndServices() {
 
         {/* Container Cards - Dirubah jadi grid 1 kolumn murni di hp, 2 di tablet */}
         {/* TODO: Ganti URL di bawah dengan path gambar pattern background roti milikmu */}
-        <div className="relative py-16 px-4 md:px-8 bg-[url('/images/ng-roti1.png')] bg-contain bg-center bg-no-repeat">
+        <div className="relative py-16 px-4 md:px-8 bg-[url('/images/ng-roti1.png')] bg-contain bg-center bg-repeat">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 relative z-10 mb-10 mt-10">
             {features.map((item, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }}>

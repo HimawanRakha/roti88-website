@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row justify-between gap-12 md:gap-8">
         {/* Kolom Kiri: Brand & Deskripsi */}
         <div className="md:col-span-2 lg:col-span-1 lg:w-1/2">
-          <h2 className="text-2xl md:text-4xl font-bold mb-4 font-lora tracking-tight">ROTI 88</h2>
+          <h2 className="text-2xl md:text-4xl  mb-4 font-serif tracking-tight">ROTI 88</h2>
           <p className="text-[13px] md:text-base mb-6 max-w-sm text-gray-200 font-lora">Fresh from oven everyday! Banyak pilihan, Selalu siap jadi pilihanmu hari ini.</p>
 
           {/* Sosial Media Icons */}
@@ -85,7 +85,7 @@ export default function Footer() {
       </div>
 
       {/* Bagian Bawah: Copyright */}
-      <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/30 text-[10px] md:text-[15px] text-gray-300 font-serif justify-center">@2026 ROTI 88. All right reserved</div>
+      <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/30 text-[10px] md:text-[15px] text-gray-300 font-serif justify-center text-center">@2026 ROTI 88. All right reserved</div>
     </motion.footer>
   );
 }

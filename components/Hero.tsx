@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen bg-[#F87900] overflow-hidden flex flex-col items-center justify-center">
+    <section id="home" className="relative min-h-screen bg-[#F87900] overflow-hidden flex flex-col items-center justify-center pb-20 md:pb-22">
       {/* 1. Dekorasi Lelehan Coklat (Top Chocolate Drip) */}
       <div className="absolute inset-0 w-full h-[50vh] md:h-full pointer-events-none z-0">
         {/* Di mobile pakai object-cover agar memanjang ke bawah sesuai desain, di desktop kembali ke object-contain milikmu */}
@@ -19,12 +19,17 @@ export default function Hero() {
       {/* mt ditambahkan sedikit di mobile agar tidak tertutup lelehan coklat yang memanjang */}
       <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut" }} className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-6xl mt-20 md:mt-16">
         {/* 2. Judul Besar: ROTI & Gambar 88 */}
-        <div className="flex flex-row items-center justify-center gap-3 sm:gap-6 md:gap-16 lg:gap-32 mb-6 w-full px-4 md:px-0">
+        <div className="flex flex-row items-center justify-center gap-3 sm:gap-6 md:gap-16 lg:gap-24 mb-6 w-full px-4 md:px-0">
           <h1
-            // Di desktop text-stroke 6px, di mobile 2px agar tidak ketebalan. Tracking juga disesuaikan.
-            className="font-serif font-bold text-[#FFFF00] drop-shadow-md tracking-normal [-webkit-text-stroke:2.5px_#1A1A1A] md:[-webkit-text-stroke:4px_#1A1A1A]"
+            data-text="ROTI" // Tambahkan atribut ini untuk digunakan di pseudo-element
+            // Gunakan relative, z-10, dan -z-10 untuk mengatur penumpukan
+            // Gunakan [-webkit-text-stroke] hanya pada elemen semu 'before'
+            className="relative font-serif  text-[#FFFF00] tracking-normal z-10 
+             before:content-[attr(data-text)] before:absolute before:left-0 before:top-0 before:-z-10 
+             before:text-[#FFFF00]
+             before:[-webkit-text-stroke:4px_#1A1A1A] md:before:[-webkit-text-stroke:10px_#1A1A1A]"
             style={{
-              fontSize: "clamp(64px, 14vw, 320px)", // Diperkecil batas bawah mobile agar seimbang dengan gambar 88
+              fontSize: "clamp(64px, 16vw, 320px)",
               lineHeight: "1",
             }}
           >
@@ -57,11 +62,11 @@ export default function Hero() {
 
         {/* 4. Tombol Aksi (Call to Action) */}
         {/* Disusun bertumpuk vertikal (flex-col) 100% full width di mobile, kembali berdampingan di desktop */}
-        <div className="flex flex-col md:flex-row gap-3 md:gap-5 justify-center items-center w-full md:w-auto px-4 md:px-0 ">
+        <div className="flex flex-col md:flex-row gap-3 md:gap-5 justify-center items-center w-full md:w-auto px-4 md:px-0">
           {/* Tombol Lihat Produk */}
           <a
             href="/produk"
-            className="flex items-center justify-center gap-1.5 md:gap-4 bg-[#5B2E1E] text-white font-serif text-[13px] md:text-xl px-4 py-3 md:px-8 md:py-4 rounded-xl md:rounded-xl hover:bg-[#432014] transition-all duration-300 shadow-xl w-full md:w-auto hover:-translate-y-1"
+            className="flex items-center justify-center gap-1.5 md:gap-4 bg-[#5B2E1E] text-white font-lora text-[13px] md:text-xl px-4 py-3 md:px-8 md:py-4 rounded-xl md:rounded-xl hover:bg-[#432014] transition-all duration-300 shadow-xl w-full md:w-auto hover:-translate-y-1"
           >
             <span className="whitespace-nowrap">Lihat Produk</span>
             <span className="bg-white rounded-full p-1 md:p-1.5 flex items-center justify-center">
@@ -73,7 +78,7 @@ export default function Hero() {
           {/* Tombol Beli Sekarang */}
           <a
             href="https://wa.me/6282142634989"
-            className="flex items-center justify-center gap-1.5 md:gap-4 bg-white text-black font-serif font-bold text-[13px] md:text-xl px-4 py-3 md:px-8 md:py-4 rounded-lg md:rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-xl w-full md:w-auto hover:-translate-y-1"
+            className="flex items-center justify-center gap-1.5 md:gap-4 bg-white text-black font-lora font-bold text-[13px] md:text-xl px-4 py-3 md:px-8 md:py-4 rounded-lg md:rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-xl w-full md:w-auto hover:-translate-y-1"
           >
             <Phone className="text-black w-3 h-3 md:w-[24px] md:h-[24px]" />
             <span className="whitespace-nowrap">Beli Sekarang</span>
