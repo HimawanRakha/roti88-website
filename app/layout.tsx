@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ROTI 88 |  Selalu Jadi Pilihan! ",
     description: "Pilihan tepat untuk camilan keluarga. Temukan berbagai varian roti favoritmu di ROTI 88.",
-    url: "https://roti88-website.vercel.app",
+    url: "https://www.roti88lumajang.com/",
     siteName: "ROTI 88",
     images: [
       {

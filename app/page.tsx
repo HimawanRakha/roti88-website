@@ -16,7 +16,7 @@ export default function Home() {
             "@type": "Bakery",
             name: "Roti88",
             image: "../images/logo.png",
-            url: "https://roti88-website.vercel.app/",
+            url: "https://www.roti88lumajang.com/",
             telephone: "6282142634989",
             address: {
               "@type": "67316",

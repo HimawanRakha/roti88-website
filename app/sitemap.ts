@@ -2,7 +2,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://roti88-website.vercel.app"; // Ganti dengan domain aslimu nanti
+  const baseUrl = "https://www.roti88lumajang.com/"; // Ganti dengan domain aslimu nanti
 
   return [
     {
