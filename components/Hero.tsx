@@ -22,7 +22,8 @@ export default function Hero() {
         <div className="flex flex-row items-center justify-center gap-3 sm:gap-6 md:gap-16 lg:gap-24 mb-6 w-full px-4 md:px-0">
           <h1
             data-text="ROTI"
-            className="relative font-serif  text-[#FFFF00] tracking-normal z-10 
+            className="relative inline-block font-serif text-[#FFFF00] drop-shadow-md tracking-normal z-10 
+             antialiased transform-gpu will-change-transform /* <-- Ini obat anti-glitch nya */
              before:content-[attr(data-text)] before:absolute before:left-0 before:top-0 before:-z-10 
              before:text-[#FFFF00]
              before:[-webkit-text-stroke:4px_#1A1A1A] md:before:[-webkit-text-stroke:10px_#1A1A1A]"
@@ -37,7 +38,7 @@ export default function Hero() {
           {/* Placeholder Gambar 88 (Rotasi ke kanan) */}
           {/* Responsive aspect ratio supaya image membesar mengecil seirama screen size dari hp ke desktop */}
           <div className="relative shrink-0 w-[24vw] sm:w-[200px] md:w-[250px] lg:w-[450px] min-w-[150px] aspect-[11/8]">
-            <Image src="/images/88-image.png" alt="Logo 88" fill className="object-contain" priority />
+            <Image src="/images/88-image.png" alt="Logo 88" fill className="object-contain" priority sizes="(max-width: 640px) 24vw, (max-width: 768px) 200px, (max-width: 1024px) 250px, 450px" />
           </div>
         </div>
 
@@ -50,7 +51,7 @@ export default function Hero() {
             {/* Placeholder Gambar Everyday */}
             {/* Membesarkan ukuran rasio dasar dan menggunakan margin negatif agar memeluk erat teks di HP dan Tablet */}
             <div className="relative w-[90px] h-[40px] sm:w-[130px] sm:h-[45px] md:w-[15vw] md:h-[90px] lg:w-[15vw] lg:h-[100px] -rotate-12 flex-shrink-0 -mx-1 sm:-mx-5 md:-mx-4 lg:-mx-6">
-              <Image src="/images/everyday-image2.png" alt="Everyday" fill className="object-contain" />
+              <Image src="/images/everyday-image2.png" alt="Everyday" fill className="object-contain" sizes="(max-width: 640px) 90px, (max-width: 768px) 130px, 15vw" />
             </div>
 
             <span className="z-10 relative">Banyak pilihan,</span>
