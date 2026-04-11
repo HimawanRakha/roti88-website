@@ -13,7 +13,7 @@ export default function ProductCard({ product, onSelect }: ProductCardProps) {
     <div onClick={() => onSelect(product)} className="bg-white rounded-xl md:rounded-xl shadow-md p-3 md:p-5 flex flex-col hover:shadow-xl transition-shadow duration-300 cursor-pointer">
       <div className="relative aspect-[4/3] rounded-lg md:rounded-xl overflow-hidden mb-3 md:mb-5">
         <Image src={product.imageUrl} alt={product.name} fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" />
-        <button onClick={() => onSelect(product)} className="absolute top-2 right-2 bg-white p-1.5 md:p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-150">
+        <button suppressHydrationWarning onClick={() => onSelect(product)} className="absolute top-2 right-2 bg-white p-1.5 md:p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-150">
           <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 text-gray-700" />
         </button>
       </div>

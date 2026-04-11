@@ -68,6 +68,7 @@ function ProductsContent() {
     <div className="space-y-6">
       <div className="relative">
         <input
+          suppressHydrationWarning
           type="text"
           placeholder="Cari Roti..."
           value={searchTerm}
@@ -109,7 +110,7 @@ function ProductsContent() {
           <span className="text-sm md:text-base text-gray-600">
             <strong className="text-gray-900">{filteredProducts.length}</strong> Roti ditemukan
           </span>
-          <button onClick={() => setIsMobileFilterOpen(true)} className="md:hidden flex items-center gap-2 px-3 py-1.5 border border-gray-300 rounded text-sm text-gray-700 bg-white">
+          <button suppressHydrationWarning onClick={() => setIsMobileFilterOpen(true)} className="md:hidden flex items-center gap-2 px-3 py-1.5 border border-gray-300 rounded text-sm text-gray-700 bg-white">
             Filter <ListFilter className="w-4 h-4" />
           </button>
         </div>
@@ -135,13 +136,13 @@ function ProductsContent() {
             {/* Pagination Controls */}
             {totalPages > 1 && (
               <div className="flex justify-end items-center gap-4 mt-10 pt-6 border-t border-gray-200">
-                <button onClick={handlePrevPage} disabled={currentPage === 1} className="p-2 border border-gray-300 rounded-lg bg-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 transition">
+                <button suppressHydrationWarning onClick={handlePrevPage} disabled={currentPage === 1} className="p-2 border border-gray-300 rounded-lg bg-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 transition">
                   <ArrowLeft className="w-5 h-5 text-gray-700" />
                 </button>
                 <span className="text-sm text-gray-600 font-medium">
                   Hal {currentPage} / {totalPages}
                 </span>
-                <button onClick={handleNextPage} disabled={currentPage === totalPages} className="p-2 border border-gray-300 rounded-lg bg-[#5A2C22] text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#4a241b] transition">
+                <button suppressHydrationWarning onClick={handleNextPage} disabled={currentPage === totalPages} className="p-2 border border-gray-300 rounded-lg bg-[#5A2C22] text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#4a241b] transition">
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
@@ -156,12 +157,12 @@ function ProductsContent() {
           <div className="w-4/5 max-w-sm bg-white h-full shadow-2xl p-6 overflow-y-auto transform transition-transform">
             <div className="flex justify-between items-center mb-8 border-b pb-4">
               <h3 className="text-lg font-bold text-gray-900">Filter Roti</h3>
-              <button onClick={() => setIsMobileFilterOpen(false)} className="p-2 bg-gray-100 rounded-full">
+              <button suppressHydrationWarning onClick={() => setIsMobileFilterOpen(false)} className="p-2 bg-gray-100 rounded-full">
                 <X className="w-5 h-5" />
               </button>
             </div>
             {FilterContent()}
-            <button onClick={() => setIsMobileFilterOpen(false)} className="w-full mt-8 bg-orange-600 text-white py-3 rounded-lg font-semibold text-xs">
+            <button suppressHydrationWarning onClick={() => setIsMobileFilterOpen(false)} className="w-full mt-8 bg-orange-600 text-white py-3 rounded-lg font-semibold text-xs">
               Terapkan Filter
             </button>
           </div>

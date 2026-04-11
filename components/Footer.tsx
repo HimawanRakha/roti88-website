@@ -41,22 +41,27 @@ export default function Footer() {
             <ul className="space-y-1 font-serif text-[15px] md:text-[18px] text-gray-200">
               {/* TODO: Masukkan link untuk masing-masing halaman */}
               <li>
-                <a href="#" className="hover:text-white hover:underline transition-colors">
+                <a href="/#home" className="hover:text-white hover:underline transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white hover:underline transition-colors">
+                <a href="/#tentang" className="hover:text-white hover:underline transition-colors">
                   Tentang Kami
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white hover:underline transition-colors">
+                <a href="/produk" className="hover:text-white hover:underline transition-colors">
                   Produk
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white hover:underline transition-colors">
+                <a href="/#promo" className="hover:text-white hover:underline transition-colors">
+                  Promo
+                </a>
+              </li>
+              <li>
+                <a href="/#outlet" className="hover:text-white hover:underline transition-colors">
                   Outlet
                 </a>
               </li>
@@ -69,13 +74,13 @@ export default function Footer() {
             <ul className="space-y-1 font-serif text-[15px] md:text-[18px] text-gray-200">
               {/* TODO: Masukkan link untuk kategori produk */}
               <li>
-                <a href="#" className="hover:text-white hover:underline transition-colors">
+                <a href={`/produk?category=${encodeURIComponent("Roti Manis")}`} className="hover:text-white hover:underline transition-colors">
                   Roti Manis
                 </a>
               </li>
 
               <li>
-                <a href="#" className="hover:text-white hover:underline transition-colors">
+                <a href={`/produk?category=${encodeURIComponent("Cake")}`} className="hover:text-white hover:underline transition-colors">
                   Cake
                 </a>
               </li>
